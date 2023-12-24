@@ -4,237 +4,230 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>HV Portfolio</title>
+
     <link rel="stylesheet" href="style.css">
 
-    
     <script src="https://kit.fontawesome.com/923962bb6e.js" crossorigin="anonymous" defer></script>
+
+    <script src="script.js" defer></script>
 </head>
 
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="logo">
-                <p>Raj Dev</p>
-                <span>.</span>
-            </div>
-            <div class="nav-right">
-                <div>
-                    <input type="checkbox" id="checkbox" checked>
-                    <label for="checkbox" class="toggle" onclick="themeToggle()"><i class="fa-solid fa-sun"></i><i
-                            class="fa-solid fa-moon"></i></label>
-                </div>
-                <ul class="nav-links" data-visible="false">
-                    <li><a class="active-link" href="#Hero-section">Home</a></li>
-                    <li><a href="#About">About</a></li>
-                    <li><a href="#Projects">Projects</a></li>
-                    <li><a href="#Contact">Contact Me</a></li>
-                </ul>
+    <section id="hero-section">
+        <header>
+            <nav class="navbar">
+                <div class="logo">
+                    <p>Harsha Dev<span>.</span></p>
 
-                <!-- <div class="ham">
+                </div>
+                <div class="nav-right">
+                    <!-- <div>
+                        <input type="checkbox" id="checkbox" checked>
+                        <label for="checkbox" class="toggle" onclick="themeToggle()"><i class="fa-solid fa-sun"></i><i
+                                class="fa-solid fa-moon"></i></label>
+                    </div> -->
+                    <ul class="nav-links" data-visible="false">
+                        <li><a class="active-link" href="#hero-section">Home</a></li>
+                        <li><a href="#About">About</a></li>
+                        <li><a href="#Projects">Projects</a></li>
+                        <li><a href="#Contact">Contact Me</a></li>
+                    </ul>
+
+                    <!-- <div class="ham">
                     <i class="fa-solid fa-bars"></i>
                 </div> -->
-                <div style="display: grid; place-items: center;">
-                    <div class="ham">
-                        <div data-expanded="false"></div>
-                        <div data-expanded="false"></div>
-                        <div data-expanded="false"></div>
+                    <div style="display: grid; place-items: center;">
+                        <div class="ham">
+                            <div data-expanded="false"></div>
+                            <div data-expanded="false"></div>
+                            <div data-expanded="false"></div>
+                        </div>
                     </div>
                 </div>
-            </div>
 
 
-        </nav>
-    </header>
-
-    <main>
-        <section id="Hero-section">
-            <div class="left">
-                <div class="name">Harsha Vardhan</div>
-                <h1>I'm a <span>Web Developer</span></h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet sed soluta culpa maiores suscipit
-                    consequuntur reprehenderit explicabo vitae! Reiciendis, quae!</p>
-
-                <div><a href="https://drive.google.com/file/d/16eIEZO1C2gsQWAJw_zZTWrnhjqGA9g13/view?usp=sharing"
-                        target="_blank"><button class="btn">Download CV<i class="fa-solid fa-angle-right"
-                                style="margin-inline: 6px;"></i></button></a></div>
-
-                <div class="social-icons">
-                    <div><a href="https://github.com/HarshaVardhanRajuK" target="_blank"><i
-                                class="fa-brands fa-github"></i></a></div>
-                    <div><a href="https://www.linkedin.com/in/harsha-vardhan-raju-kondapalli-a7509a183/"
-                            target="_blank"><i class="fa-brands fa-linkedin"></i></a></div>
-                    <div><a href="" target="_blank"><i class="fa-brands fa-instagram"></i></a></div>
+            </nav>
+        </header>
+        <div class="left">
+            <div class="profile-pic-xl">
+                <div>
+                    <img src="profile pic.jpg"
+                        alt="Profile pic">
                 </div>
             </div>
+        </div>
 
 
-            <div class="right">
-                <img src="./profilePic.jpeg" alt="profile" srcset="">
+        <div class="right">
+            <div class="profile-pic-md">
+                <img src="profile pic.jpg" alt="Profile pic">
             </div>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="Html"><path fill="#ea4335" d="M3.345 21.601 1.419 0h21.162l-1.928 21.597L11.987 24l-8.642-2.399z" class="colore44d26 svgShape"></path><path fill="#fbbc05" d="m12 22.164 7.003-1.941L20.65 1.766H12v20.398z" class="colorf16529 svgShape"></path><path fill="#4285f4" d="M12 9.778H8.494l-.242-2.713H12V4.416H5.357l.063.71.651 7.301H12V9.778zm0 6.88-.012.003-2.95-.797-.189-2.113H6.19l.371 4.16 5.427 1.506.012-.003v-2.756z" class="colorebebeb svgShape"></path><path fill="#34a853" d="M11.991 9.778v2.649h3.262l-.308 3.436-2.955.797v2.756l5.431-1.505.04-.448.623-6.975.065-.711h-.714l-5.444.001zm0-5.362v2.649h6.399l.053-.596.121-1.343.063-.711-6.636.001z" class="colorffffff svgShape"></path></svg>
+            <div class="name">Harsha Vardhan</div>
+            <h1>I'm a <span>Web Developer</span></h1>
+            <p>Experienced frontend developer with a passion for creating visually stunning and user-friendly websites.
+            </p>
 
-        </section>
+            <div><a href="https://drive.google.com/file/d/16eIEZO1C2gsQWAJw_zZTWrnhjqGA9g13/view?usp=sharing"
+                    target="_blank"><button class="btn">Download CV<i class="fa-solid fa-angle-right"
+                            style="margin-inline: 6px;"></i></button></a></div>
 
+            <div class="social-icons">
+                <div class="github">
+                    <a href="https://github.com/HarshaVardhanRajuK" target="_blank">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                </div>
+                <div>
+                    <a href="https://www.linkedin.com/in/harsha-vardhan-raju-kondapalli-a7509a183/" target="_blank">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </div>
+                <div>
+                    <a href="" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-
-        <section id="About">
-            <h1>About Me</h1>
-            <div class="about-content">
-                <div class="about-left">
-                    <h3>My Introduction</h3>
-                    <p>As a B.Tech graduate and skilled web developer, I bring a strong foundation in technology and a
-                        passion for creating dynamic and responsive web solutions. With expertise in front-end and
-                        back-end development, I thrive on turning innovative ideas into user-friendly websites, ensuring
-                        seamless user experiences and optimal functionality.
-                    </p>
+    <section id="About" class="section-padding">
+        <h1 class="section-h1">Skills</h1>
+        <div class="section-content">
+            <div class="section-left">
+                <div class="section-left-card">
+                    <h2>My Introduction</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam modi assumenda, expedita quidem
+                        aliquid ducimus id mollitia numquam aliquam dicta necessitatibus sint nisi ratione non, deserunt
+                        dolorum nemo ad at!</p>
                     <div><a href="https://drive.google.com/file/d/16eIEZO1C2gsQWAJw_zZTWrnhjqGA9g13/view?usp=sharing"
                             target="_blank"><button class="btn">Download CV<i class="fa-solid fa-angle-right"
                                     style="margin-inline: 6px;"></i></button></a></div>
                 </div>
-
-                <div class="about-right">
-                    <div class="about-right-card">
-                        <h2>Frontend</h2>
-                        <div class="about-right-card-skills">
-                            <p>HTML</p>
-                            <p>CSS</p>
-                            <p>Bootstrap</p>
-                            <p>JS</p>
-                            <p>React JS</p>
-                        </div>
-                    </div>
-                    <div class="about-right-card">
-                        <h2>
-                            Backend
-                        </h2>
-                        <div class="about-right-card-skills">
-                            <p>Node JS</p>
-                            <p>Express JS</p>
-                        </div>
-                    </div>
-                    <div class="about-right-card">
-                        <h2>Database</h2>
-                        <div class="about-right-card-skills">
-                            <p>SQL</p>
-                        </div>
-                    </div>
-                </div>
-
             </div>
-        </section>
 
-        <section id="Projects">
-            <h1>Projects</h1>
-            <div class="project-container">
-                <div class="project-box">
-                    <h3 class="project-name">Project Name</h3>
-                    <p>Project desc Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Voluptas ipsum accusantium excepturi maxime, suscipit deserunt quo harum laborum
-                        consequuntur hic ut nihil, quis nisi tempore quibusdam recusandae dolorem illum quod.</p>
-                    <div><button class=" btn project-btn">view project<i class="fa-solid fa-angle-right"
-                                style="margin-inline: 6px;"></i></button></div>
+            <div class="section-right">
+                <div class="skills-div">
+                    <h3>Frontend</h3>
+                    <div class="frontend-skills">
+                        <div class="skill-item">
+                            <i class="fa-brands fa-html5" style="color: #f16528;"></i>
+                            <span>HTML</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fa-brands fa-css3-alt" style="color: #3869b5;"></i>
+                            <span>CSS</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fa-brands fa-js" style="color: #e6a428;"></i>
+                            <span>JS</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fa-brands fa-bootstrap" style="color: #834ed0;"></i>
+                            <span>BOOTSTRAP</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fa-brands fa-react" style="color: #5cdffa;"></i>
+                            <span>REACT</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="project-box">
-                    <h3 class="project-name">Project Name</h3>
-                    <p>Project desc Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Voluptas ipsum accusantium excepturi maxime, suscipit deserunt quo harum laborum
-                        consequuntur hic ut nihil, quis nisi tempore quibusdam recusandae dolorem illum quod.</p>
-                    <div><button class=" btn project-btn">view project<i class="fa-solid fa-angle-right"
-                                style="margin-inline: 6px;"></i></button></div>
-                </div>
-                <div class="project-box">
-                    <h3 class="project-name">Project Name</h3>
-                    <p>Project desc Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Voluptas ipsum accusantium excepturi maxime, suscipit deserunt quo harum laborum
-                        consequuntur hic ut nihil, quis nisi tempore quibusdam recusandae dolorem illum quod.</p>
-                    <div><button class=" btn project-btn">view project<i class="fa-solid fa-angle-right"
-                                style="margin-inline: 6px;"></i></button></div>
-                </div>
-                <div class="project-box">
-                    <h3 class="project-name">Project Name</h3>
-                    <p>Project desc Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Voluptas ipsum accusantium excepturi maxime, suscipit deserunt quo harum laborum
-                        consequuntur hic ut nihil, quis nisi tempore quibusdam recusandae dolorem illum quod.</p>
-                    <div><button class=" btn project-btn">view project<i class="fa-solid fa-angle-right"
-                                style="margin-inline: 6px;"></i></button></div>
-                </div>
-                <div class="project-box">
-                    <h3 class="project-name">Project Name</h3>
-                    <p>Project desc Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Voluptas ipsum accusantium excepturi maxime, suscipit deserunt quo harum laborum
-                        consequuntur hic ut nihil, quis nisi tempore quibusdam recusandae dolorem illum quod.</p>
-                    <div><button class=" btn project-btn">view project<i class="fa-solid fa-angle-right"
-                                style="margin-inline: 6px;"></i></button></div>
-                </div>
-                <div class="project-box">
-                    <h3 class="project-name">Project Name</h3>
-                    <p>Project desc Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Voluptas ipsum accusantium excepturi maxime, suscipit deserunt quo harum laborum
-                        consequuntur hic ut nihil, quis nisi tempore quibusdam recusandae dolorem illum quod.</p>
-                    <div><button class=" btn project-btn">view project<i class="fa-solid fa-angle-right"
-                                style="margin-inline: 6px;"></i></button></div>
+                <hr>
+                <div class="bottom-skill-cont">
+                    <div class="skills-div">
+                        <h3>Backend</h3>
+                        <div class="frontend-skills">
+                            <div class="skill-item">
+                                <i class="fa-brands fa-node"></i>
+                                <span>Node Js</span>
+                            </div>
+                            <div class="skill-item">
+                                <img src="https://i.morioh.com/210318/4630732f.webp" alt="">
+                                <span>Express Js</span>
+                            </div>
+                        </div>
+                    </div>
+                    <hr hidden>
+                    <div class="skills-div">
+                        <h3>DataBase</h3>
+                        <div class="skill-item">
+                            <i class="fa-solid fa-database"></i>
+                            <span style="margin-top: 10px;">SQL</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+        </div>
 
 
-        <section id="Contact">
-            <h1>Contact Me</h1>
-            <div class="contact-content">
-                <div class="contact-left">
-                    <h3>Contact Via</h3>
+    </section>
+
+    <section id="Projects" class="section-padding">
+        <h1 class="section-h1">Projects</h1>
+        <div class="projects-cont">
+
+        </div>
+    </section>
+
+
+    <section id="Contact" class="section-padding">
+        <h1 class="section-h1">Contact Me</h1>
+        <div class="section-content">
+            <div class="section-left">
+                <div class="section-left-card" style="height: 100%;">
+                    <h2>Contact Me @</h2>
                     <p><i class="fa-regular fa-envelope"></i>&nbsp;&nbsp;rajharsh666@gmail.com</p>
                     <p><i class="fa-solid fa-phone"></i>&nbsp;&nbsp;+91 82475 18629</p>
-
                 </div>
+            </div>
 
-                <div class="contact-right">
-                    <div class="inputs">
-                        <input type="text" placeholder="Name">
-                        <input type="email" placeholder="Email">
+            <div class="contact-right">
+                <div class="inputs">
+                    <div>
+                        <input type="text" id="contact-name">
+                        <label for="contact-name">Name</label>
                     </div>
-                    <textarea placeholder="Enter Message" cols="30" rows="8"></textarea>
-                    <div><button class="btn">Send&nbsp;&nbsp;<i class="fa-solid fa-paper-plane"></i></button></div>
+                    <div>
+                        <input type="email" id="contact-email">
+                        <label for="contact-email">Email</label>
+                    </div>
                 </div>
+                <textarea placeholder="Enter Message" cols="30" rows="8"></textarea>
+                <div><button class="btn">Send&nbsp;&nbsp;<i class="fa-solid fa-paper-plane"></i></button></div>
+            </div>
+        </div>
 
-            </div>
-        </section>
 
-        <footer id="footer">
-            <div class="top-footer">
-                <p>Raj Dev .</p>
+    </section>
+
+
+    <footer id="footer">
+        <div class="top-footer">
+            <p>Harsha Dev .</p>
+        </div>
+        <div class="middle-footer">
+            <ul class="nav-links" data-visible="false">
+                <li><a class="active-link" href="#hero-section">Home</a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#Projects">Projects</a></li>
+                <li><a href="#Contact">Contact Me</a></li>
+            </ul>
+        </div>
+        <div class="social-icons">
+            <div><a href="https://github.com/HarshaVardhanRajuK" target="_blank"><i class="fa-brands fa-github"></i></a>
             </div>
-            <div class="middle-footer">
-                <ul class="footer-menu">
-                    <li class="footer_menu_list">
-                        <a href="#Hero-section">Home</a>
-                    </li>
-                    <li class="footer_menu_list">
-                        <a href="#About">About</a>
-                    </li>
-                    <li class="footer_menu_list">
-                        <a href="#Projects">Projects</a>
-                    </li>
-                    <li class="footer_menu_list">
-                        <a href="#Contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="social-icons">
-                <div><a href="https://github.com/HarshaVardhanRajuK" target="_blank"><i
-                            class="fa-brands fa-github"></i></a></div>
-                <div><a href="https://www.linkedin.com/in/harsha-vardhan-raju-kondapalli-a7509a183/" target="_blank"><i
-                            class="fa-brands fa-linkedin"></i></a></div>
-                <div><a href="" target="_blank"><i class="fa-brands fa-instagram"></i></a></div>
-            </div>
-            <div class="bottom-footer">
-                <p>Copyright &copy; <a href="#home" style="text-decoration: none;">Raj Dev</a> - All rights reserved
-                </p>
-            </div>
-        </footer>
-    </main>
-    <script src="script.js"></script>
+            <div><a href="https://www.linkedin.com/in/harsha-vardhan-raju-kondapalli-a7509a183/" target="_blank"><i
+                        class="fa-brands fa-linkedin"></i></a></div>
+            <div><a href="" target="_blank"><i class="fa-brands fa-instagram"></i></a></div>
+        </div>
+        <div class="bottom-footer">
+            <p>Copyright &copy; <a href="#home" style="text-decoration: none;">Raj Dev</a> - All rights reserved
+            </p>
+        </div>
+    </footer>
+
 </body>
 
 </html>

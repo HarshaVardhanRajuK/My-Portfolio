@@ -1,24 +1,19 @@
-let themetoggleBtn = document.getElementById("checkbox");
-console.log(themetoggleBtn.checked);
-
-function themeToggle() {
-    // console.log(themetoggleBtn.checked);
-    
-    if (themetoggleBtn.checked){
-        document.documentElement.style.setProperty('--text-col', '#444');
-        document.documentElement.style.setProperty('--primary-bg', '#fff');
-        document.documentElement.style.setProperty('--header-bg', '#36bdf4');
-        document.documentElement.style.setProperty('--active-link', '#fff');
-        document.documentElement.style.setProperty('--project-card', '#89d1ef');
-    }else {
-        document.documentElement.style.setProperty('--text-col', '#fff');
-        document.documentElement.style.setProperty('--primary-bg', '#35155D');
-        document.documentElement.style.setProperty('--header-bg', '#512B81');
-        document.documentElement.style.setProperty('--active-link', '#36bdf4');
-        
-        document.documentElement.style.setProperty('--project-card', 'linear-gradient(to bottom, rgb(207, 79, 117),rgb(134, 60, 60)');
-    }
+window.onload = () => {
+    window.scrollTo(0,0);
 }
+
+const header = document.querySelector("header")
+window.onscroll = function() {
+    let isAtTop = (window.scrollY === 0);
+
+    if (isAtTop) {
+        header.style.boxShadow = 'none'; 
+        header.style.backgroundColor = 'transparent';
+    } else {
+        header.style.boxShadow = '0 0 10px rgba(0, 0, 0, 0.5)';
+        header.style.backgroundColor = '#33383e';
+    }
+};
 
 
 
@@ -52,8 +47,6 @@ ham.addEventListener("click",()=>{
 
 let navLinks = Array.from(document.querySelector(".nav-links").children)
 
-console.log(navLinks);
-
 
 navLinks.forEach((ele)=>{
     ele.firstChild.addEventListener("click", (e) => {
@@ -63,3 +56,80 @@ navLinks.forEach((ele)=>{
         ele.firstChild.classList.add("active-link")
     })
 })
+
+// active link
+
+const sections = document.querySelectorAll('section[id]')
+
+
+function scrollActive() {
+  const scrollY = window.scrollY;
+
+  sections.forEach(current =>{
+    const sectionHeight = current.offsetHeight,
+        sectionTop = current.offsetTop - 50,
+      sectionId = current.getAttribute('id')
+      
+
+    if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) { 
+
+        document.querySelector('.nav-links a[href*=' + sectionId + ']').classList.add('active-link')
+
+    }  else {
+
+      document.querySelector('.nav-links a[href*=' + sectionId + ']').classList.remove('active-link')
+
+    }
+  })
+}
+
+window.addEventListener('scroll', scrollActive)
+
+// project item creation and toggle feature
+
+function createAndAppendProject() {
+    let projectItem = document.createElement("div")
+    projectItem.classList.add("project-item")
+
+    projectItem.innerHTML = `<h2>Project Title</h2>
+    <p>
+        <span>Technologies Used: </span>HTML, CSS, JS, REACT
+    </p>
+    <p class="project-desc">
+        <span>Project Description: </span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus magnam modi quasi maxime ipsum unde, et possimus! Possimus unde aspernatur adipisci atque accusamus ducimus exercitationem. Nobis, nulla a, iusto iste eveniet consequuntur et aliquid provident adipisci corrupti ullam sapiente dolorum reiciendis voluptas laborum ad nemo earum molestias autem delectus. <span class="read-more ">... Read more</span>
+    </p>
+
+    <div><button class="btn">view Project<i class="fa-solid fa-angle-right"
+        style="margin-inline: 6px;"></i></button></div>`
+
+    return projectItem;
+}
+
+for (let i=0; i<6; i++) {
+    let projectsCont = document.querySelector(".projects-cont")
+    console.log(projectsCont);
+    
+    projectsCont.appendChild(createAndAppendProject())
+
+
+}
+
+let projectItems = Array.from(document.querySelectorAll(".project-item"))
+
+console.log(projectItems)
+projectItems.forEach((item)=>{
+    let readMoreBtn = item.querySelector(".read-more")
+    let projectDesc = item.querySelector(".project-desc")
+
+    readMoreBtn.addEventListener("click", ()=>{
+        projectDesc.classList.toggle("toggle-ReadMore")
+        item.classList.toggle("toggle-ReadMore")
+    
+        if (projectDesc.offsetHeight>144) {
+            readMoreBtn.textContent = "...Collapse"
+        } else {
+            readMoreBtn.textContent = "...Read more"
+        }
+    })
+})
+
