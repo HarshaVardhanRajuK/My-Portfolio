@@ -418,9 +418,6 @@ hr {
     gap: 3rem;
 }
 
-#Projects {
-    padding: 6vw 10vh;
-}
 #Projects span {
     font-weight: bold;
     color: whitesmoke;
