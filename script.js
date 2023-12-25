@@ -1,8 +1,12 @@
+const header = document.querySelector("header")
+const ham = document.querySelector(".ham")
+
 window.onload = () => {
     window.scrollTo(0,0);
+    header.style.backgroundColor = 'transparent';
+    ham.style.backgroundColor = "var(--secondary-col)"
 }
 
-const header = document.querySelector("header")
 window.onscroll = function() {
     let isAtTop = (window.scrollY === 0);
 
@@ -17,7 +21,6 @@ window.onscroll = function() {
 
 
 
-const ham = document.querySelector(".ham")
 
 ham.addEventListener("click",()=>{
     console.log("logged");
