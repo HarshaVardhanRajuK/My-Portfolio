@@ -71,14 +71,16 @@ header {
 
 .logo {
     position: relative;
+    animation: slideY 1s forwards;
 }
+
 .logo p {
     font-size: 1.5rem;
     font-weight: 600;
     /* background-image: radial-gradient( white, goldenrod); */
-    color: gold;
+    color: gold  !important;
     /* background-clip: text; */
-    text-shadow: 1px 1px var(--secondary-col);
+    text-shadow: 1px 1px var(--secondary-col) !important;
     position: relative;
 }
 
@@ -152,6 +154,13 @@ header {
     padding: 0;
     margin: 0;
 }
+.nav-links>* {
+    animation: appear 1.5s forwards;
+}
+@keyframes appear {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
 .nav-links li {
     position: relative;
 }
@@ -209,6 +218,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    animation: slideX 1s forwards;
 }
 
 .profile-pic-xl {
@@ -256,6 +266,10 @@ header {
     gap: 1.5rem;
     padding-inline: 3vw;
 }
+.right>* {
+    animation: slideX 1s forwards;
+}
+
 
 .name {
     width: fit-content;
@@ -442,6 +456,7 @@ hr {
     gap: 10px;
     height: 350px;
     position: relative;
+    font-size: 16px;
 }
 .project-title {
     text-align: center;
@@ -455,7 +470,7 @@ hr {
     position: absolute;
     bottom: 50px;
     right: 16px;
-    font-size: 14px;
+    font-size: 0.75em;
 }
 
 .read-more:hover {
@@ -483,46 +498,50 @@ hr {
     gap: 10px;
 }
 .inputs div {
-    border-radius: 10px;
     padding: 16px;
-    border: 1px solid gray;
+    border-bottom: 3px solid white;
     width: 50%;
-    color: #444444;
-    background-color: white;
+    color: white;
+    background-color: transparent;
     position: relative;
 }
+
 .inputs label {
     position: absolute;
     left: 1rem;
-    background-color: white;
     border-radius: 3px;
     top: 14px;
     transition: all .4s ease;
+    color: var(--primary-col);
+
 }
 #contact-name, #contact-email {
     width: 100%;
     border: none;
     outline: none;
     font-size: 1rem;
+    background-color: transparent;
+    color: white;
 }
 .inputs div input:focus + label {
     top: -12px;
-    padding: 0 12px;
     transition: top .4s ease;
 }
-.inputs div input:focus + .inputs div {
-    border: 2px solid red;
+.inputs div input:focus , .inputs div {
+    border-color: var(--primary-col);
 }
 
 
 
 
 textarea {
-    color: #444444;
-    border-radius: 10px;
+    color: white;
     padding: 16px;
     outline: none;
     font-size: 1rem;
+    background: transparent;
+    border: 0;
+    border-bottom: 3px solid var(--primary-col);
 }
 
 
@@ -562,7 +581,27 @@ textarea {
     margin-top: 10px;
 }
 
+@keyframes slideY {
+    from {
+        opacity: 0;
+        transform: translateY(-200%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
+@keyframes slideX {
+    from {
+        transform: translateX(-50%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
 
 @media only screen and (max-width: 990px) {
     * {

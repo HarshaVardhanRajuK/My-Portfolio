@@ -52,8 +52,7 @@
         <div class="left">
             <div class="profile-pic-xl">
                 <div>
-                    <img src="profile pic.jpg"
-                        alt="Profile pic">
+                    <img src="profile pic.jpg" alt="Profile pic">
                 </div>
             </div>
         </div>
@@ -167,7 +166,22 @@
     <section id="Projects" class="section-padding">
         <h1 class="section-h1">Projects</h1>
         <div class="projects-cont">
+            <div class="project-item">
+                <h2>${project.title}</h2>
+                <p>
+                    <span>Technologies Used: </span>${project.techUsed}
+                </p>
+                <p class="project-desc">
+                    <span>Description: </span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus magnam
+                    modi quasi maxime ipsum unde, et possimus! Possimus unde aspernatur adipisci atque accusamus ducimus
+                    exercitationem. Nobis, nulla a, iusto iste eveniet consequuntur et aliquid provident adipisci
+                    corrupti ullam sapiente dolorum reiciendis voluptas laborum ad nemo earum molestias autem delectus.
+                    <span class="read-more">... Read more</span>
+                </p>
 
+                <div><button class="btn">view Project<i class="fa-solid fa-angle-right"
+                            style="margin-inline: 6px;"></i></button></div>
+            </div>
         </div>
     </section>
 
@@ -194,7 +208,7 @@
                         <label for="contact-email">Email</label>
                     </div>
                 </div>
-                <textarea placeholder="Enter Message" cols="30" rows="8"></textarea>
+                <textarea placeholder="Enter Message you want to convey" cols="30" rows="8"></textarea>
                 <div><button class="btn">Send&nbsp;&nbsp;<i class="fa-solid fa-paper-plane"></i></button></div>
             </div>
         </div>
@@ -205,7 +219,9 @@
 
     <footer id="footer">
         <div class="top-footer">
-            <p>Harsha Dev .</p>
+            <div class="logo">
+                <p>Harsha Dev<span>.</span></p>
+            </div>
         </div>
         <div class="middle-footer">
             <ul class="nav-links" data-visible="false">
