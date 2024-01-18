@@ -60,6 +60,17 @@ navLinks.forEach((ele) => {
     })
 })
 
+// typed
+
+let text = document.getElementById("text")
+let typed = new Typed(text, {
+    strings: ["Web Developer"],
+    typeSpeed: 50,
+    backSpeed: 50,
+    loop: true,
+  });
+
+
 // active link
 
 const sections = document.querySelectorAll('section[id]')
@@ -96,31 +107,44 @@ const projectArray = [
     {
         title: "Todo List App",
         techUsed: "HTML, CSS, JS, BOOTSTRAP",
-        description: "",
+        description: "Crafted a sleek and user-friendly todos app using HTML, CSS, JS, and Bootstrap. Seamlessly manage tasks with a stylish interface, offering an efficient and enjoyable task management experience.",
         githubLink: "",
         deployLink: "https://hvtodosapp.ccbp.tech/",
+        button: true
     },
     {
         title: "W3Schools.com Clone",
         techUsed: "HTML, CSS, JS",
-        description: "",
+        description: "Replicated the frontend of w3schools.com using HTML, CSS, and JS. Emulated the renowned educational platform's layout and design, providing an interactive and responsive learning environment for web development enthusiasts.",
         githubLink: "",
         deployLink: "https://peaceful-strudel-ebb1cd.netlify.app/",
+        button: true
     },
     {
         title: "Wikipedia Search",
         techUsed: "HTML, CSS, JS",
-        description: "",
+        description: "Designed and implemented a Wikipedia search app using HTML, CSS, and JS. Utilized API calls to fetch and display dynamic content, offering a seamless and informative browsing experience for users.",
         githubLink: "",
-        deployLink: "hvwikiapp.ccbp.tech",
+        deployLink: "https://hvwikiapp.ccbp.tech",
+        button: true
     },
     {
         title: "Countries Search",
         techUsed: "HTML, CSS, JS",
+        description: "Developed a dynamic countries search app using HTML, CSS, and JS. Utilized API integration to fetch and display detailed information about countries, offering a seamless and informative user experience.",
+        githubLink: "",
+        deployLink: "https://hvfetchcountry.ccbp.tech",
+        button: true
+    },
+    {
+        title: "More to come",
+        techUsed: "",
         description: "",
         githubLink: "",
-        deployLink: "hvfetchcountry.ccbp.tech",
+        deployLink: "",
+        button: false
     },
+
     
 ]
 
@@ -128,18 +152,21 @@ function createAndAppendProject(project) {
     let projectItem = document.createElement("div")
     projectItem.classList.add("project-item")
 
-    projectItem.innerHTML = `<h2>${project.title}</h2>
+    projectItem.innerHTML = `${project.button ? `<h2>${project.title}</h2>
     <p>
         <span>Technologies Used: </span>${project.techUsed}</p>
     <p class="project-desc">
-        <span>Description:  </span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus magnam modi quasi maxime ipsum unde, et possimus! Possimus unde aspernatur adipisci atque accusamus ducimus exercitationem. Nobis, nulla a, iusto iste eveniet consequuntur et aliquid provident adipisci corrupti ullam sapiente dolorum reiciendis voluptas laborum ad nemo earum molestias autem delectus. <span class="read-more ">... Read more</span>
+        <span>Description:  </span>${project.description}<span class="read-more ">... Read more</span>
     </p>
 
-    <div><button class="btn">view Project<i class="fa-solid fa-angle-right"
-        style="margin-inline: 6px;"></i></button></div>`
+    <div><button class="btn"><a href="${project.deployLink}" target=_blank style="text-decoration: none;color:white;">view Project<i class="fa-solid fa-angle-right"
+        style="margin-inline: 6px;"></i></a></button></div>`:`<h2>More to come</h2>`}`
 
     return projectItem;
 }
+
+
+
 
 projectArray.forEach((project) => {
     let projectsCont = document.querySelector(".projects-cont")
@@ -147,29 +174,68 @@ projectArray.forEach((project) => {
 
     projectsCont.appendChild(createAndAppendProject(project))
 
-    // let projectItem = document.createElement("div")
-    // projectItem.classList.add("project-item")
-
-    // projectItem.textContent = "More to come."
-
+    
 })
+
 
 let projectItems = Array.from(document.querySelectorAll(".project-item"))
 
 console.log(projectItems)
-projectItems.forEach((item) => {
+projectItems.forEach((item, i, arr) => {
     let readMoreBtn = item.querySelector(".read-more")
     let projectDesc = item.querySelector(".project-desc")
 
-    readMoreBtn.addEventListener("click", () => {
-        projectDesc.classList.toggle("toggle-ReadMore")
-        item.classList.toggle("toggle-ReadMore")
-
-        if (projectDesc.offsetHeight > 144) {
-            readMoreBtn.textContent = "...Collapse"
-        } else {
-            readMoreBtn.textContent = "...Read more"
-        }
-    })
+    if(i!==arr.length-1){
+        console.log("this")
+        readMoreBtn.addEventListener("click", () => {
+            projectDesc.classList.toggle("toggle-ReadMore")
+            item.classList.toggle("toggle-ReadMore")
+    
+            if (projectDesc.offsetHeight > 144) {
+                readMoreBtn.textContent = "...Collapse"
+            } else {
+                readMoreBtn.textContent = "...Read more"
+            }
+        })
+    }
+    
 })
 
+// contact 
+
+let contactName = document.getElementById("contact-name")
+let contactEmail = document.getElementById("contact-email")
+
+let sendBtn = document.getElementById("sendBtn")
+
+function handleInputs() {
+    if (contactEmail.value === "" || contactEmail.value === ""){
+        sendBtn.classList.add("shake")
+        setTimeout(() => {
+            sendBtn.classList.remove("shake")
+        }, 300);
+    }
+    
+}
+
+sendBtn.addEventListener("click", handleInputs)
+
+// let inputs = Array.from(document.getElementsByTagName("input"))
+// inputs.map(input => {
+//     console.log("changed top")
+//     input.addEventListener("change",()=>{
+//         console.log("changed")
+//         if (input.value !== ""){
+//             input.classList.add("input-filled")
+//         }
+//     })
+// });
+
+function onchangeFunc(ele) {
+
+    if (ele.value.trim() !== "") {
+        ele.classList.add("input-filled");
+      } else {
+        ele.classList.remove("input-filled");
+      }
+}

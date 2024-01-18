@@ -11,10 +11,12 @@
     <script src="https://kit.fontawesome.com/923962bb6e.js" crossorigin="anonymous" defer></script>
 
     <script src="script.js" defer></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    
 </head>
 
 <body>
-    <section id="hero-section">
+    <section id="hero-section" class="section-padding">
         <header>
             <nav class="navbar">
                 <div class="logo">
@@ -22,21 +24,12 @@
 
                 </div>
                 <div class="nav-right">
-                    <!-- <div>
-                        <input type="checkbox" id="checkbox" checked>
-                        <label for="checkbox" class="toggle" onclick="themeToggle()"><i class="fa-solid fa-sun"></i><i
-                                class="fa-solid fa-moon"></i></label>
-                    </div> -->
                     <ul class="nav-links" data-visible="false">
                         <li><a class="active-link" href="#hero-section">Home</a></li>
                         <li><a href="#About">About</a></li>
                         <li><a href="#Projects">Projects</a></li>
                         <li><a href="#Contact">Contact Me</a></li>
                     </ul>
-
-                    <!-- <div class="ham">
-                    <i class="fa-solid fa-bars"></i>
-                </div> -->
                     <div style="display: grid; place-items: center;">
                         <div class="ham">
                             <div data-expanded="false"></div>
@@ -49,6 +42,7 @@
 
             </nav>
         </header>
+
         <div class="left">
             <div class="profile-pic-xl">
                 <div>
@@ -63,7 +57,7 @@
                 <img src="profile pic.jpg" alt="Profile pic">
             </div>
             <div class="name">Harsha Vardhan</div>
-            <h1>I'm a <span>Web Developer</span></h1>
+            <h1>I'm a <span id="text" style="font-size: inherit;font-weight: bold;"></span></h1>
             <p>Experienced frontend developer with a passion for creating visually stunning and user-friendly websites.
             </p>
 
@@ -166,22 +160,7 @@
     <section id="Projects" class="section-padding">
         <h1 class="section-h1">Projects</h1>
         <div class="projects-cont">
-            <div class="project-item">
-                <h2>${project.title}</h2>
-                <p>
-                    <span>Technologies Used: </span>${project.techUsed}
-                </p>
-                <p class="project-desc">
-                    <span>Description: </span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus magnam
-                    modi quasi maxime ipsum unde, et possimus! Possimus unde aspernatur adipisci atque accusamus ducimus
-                    exercitationem. Nobis, nulla a, iusto iste eveniet consequuntur et aliquid provident adipisci
-                    corrupti ullam sapiente dolorum reiciendis voluptas laborum ad nemo earum molestias autem delectus.
-                    <span class="read-more">... Read more</span>
-                </p>
-
-                <div><button class="btn">view Project<i class="fa-solid fa-angle-right"
-                            style="margin-inline: 6px;"></i></button></div>
-            </div>
+           
         </div>
     </section>
 
@@ -200,16 +179,16 @@
             <div class="contact-right">
                 <div class="inputs">
                     <div>
-                        <input type="text" id="contact-name">
+                        <input type="text" id="contact-name" oninput="onchangeFunc(this)">
                         <label for="contact-name">Name</label>
                     </div>
                     <div>
-                        <input type="email" id="contact-email">
+                        <input type="email" id="contact-email" oninput="onchangeFunc(this)">
                         <label for="contact-email">Email</label>
                     </div>
                 </div>
                 <textarea placeholder="Enter Message you want to convey" cols="30" rows="8"></textarea>
-                <div><button class="btn">Send&nbsp;&nbsp;<i class="fa-solid fa-paper-plane"></i></button></div>
+                <div><button class="btn" id="sendBtn">Send&nbsp;&nbsp;<i class="fa-solid fa-paper-plane"></i></button></div>
             </div>
         </div>
 
@@ -217,7 +196,7 @@
     </section>
 
 
-    <footer id="footer">
+    <footer id="footer" class="section-padding">
         <div class="top-footer">
             <div class="logo">
                 <p>Harsha Dev<span>.</span></p>
@@ -239,7 +218,7 @@
             <div><a href="" target="_blank"><i class="fa-brands fa-instagram"></i></a></div>
         </div>
         <div class="bottom-footer">
-            <p>Copyright &copy; <a href="#home" style="text-decoration: none;">Raj Dev</a> - All rights reserved
+            <p>Copyright &copy; <a href="#home" style="text-decoration: none;">Harsha Dev</a> - All rights reserved
             </p>
         </div>
     </footer>

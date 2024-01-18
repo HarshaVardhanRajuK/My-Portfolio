@@ -13,16 +13,14 @@ html {
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    /* color: var(--text-col); */
-    /* background-color: var(--secondary-col); */
 }
-section {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    background-color: var(--secondary-col);
+/* section {
     padding: 6vw 10vh;
-}
+} */
 .section-padding {
     padding: 6vw 8vw;
+    background-color: var(--secondary-col);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .btn {
@@ -288,6 +286,10 @@ header {
 }
 h1 {
     font-size: 2.5rem;
+    font-weight: 600;
+}
+h1>span {
+    color: var(--primary-col);
 }
 .fa-angle-right {
     transition: .3s ease-out;
@@ -458,6 +460,7 @@ hr {
     position: relative;
     font-size: 16px;
 }
+
 .project-title {
     text-align: center;
     color: whitesmoke;
@@ -471,6 +474,7 @@ hr {
     bottom: 50px;
     right: 16px;
     font-size: 0.75em;
+    cursor: pointer;
 }
 
 .read-more:hover {
@@ -602,6 +606,22 @@ textarea {
         opacity: 1;
     }
 }
+
+.shake {
+    animation: shake .3s forwards;
+}
+@keyframes shake {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    25%, 75% {
+      transform: translateX(-10px);
+    }
+    50% {
+      transform: translateX(10px);
+    }
+  }
+  
 
 @media only screen and (max-width: 990px) {
     * {
