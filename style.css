@@ -725,6 +725,9 @@ textarea {
     h1{
         font-size: 2rem;
     }
+    .typed-cursor {
+        font-size: 2rem !important;
+    }
     header {
         background-color: var(--primary-col);
     }
