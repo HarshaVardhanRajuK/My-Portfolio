@@ -13,7 +13,7 @@
     <script src="script.js" defer></script>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 
-    
+
 
 </head>
 
@@ -21,10 +21,11 @@
     <section id="hero-section" class="section-padding">
         <header>
             <nav class="navbar">
-                <div class="logo">
+                <a href="#hero-section" style="text-decoration: none;">
+                <div class="logo" >
                     <p>Harsha Dev<span>.</span></p>
 
-                </div>
+                </div></a>
                 <div class="nav-right">
                     <ul class="nav-links" data-visible="false">
                         <li><a class="active-link" href="#hero-section">Home</a></li>
@@ -48,7 +49,7 @@
         <div class="left">
             <div class="profile-pic-xl">
                 <div>
-                    <img src="sample.jpeg" alt="Profile pic">
+                    <img src="profilePic.jpeg" alt="Profile pic">
                 </div>
             </div>
         </div>
@@ -56,7 +57,7 @@
 
         <div class="right">
             <div class="profile-pic-md">
-                <img src="sample.jpeg" alt="Profile pic">
+                <img src="profilePic.jpeg" alt="Profile pic">
             </div>
             <div class="name">Harsha Vardhan</div>
             <h1>I'm a <span id="text" style="font-size: inherit;font-weight: bold;"></span></h1>
@@ -68,20 +69,25 @@
                             style="margin-inline: 6px;"></i></button></a></div>
 
             <div class="social-icons">
-                <div class="github">
+                <div class="icon">
                     <a href="https://github.com/HarshaVardhanRajuK" target="_blank">
                         <i class="fa-brands fa-github"></i>
                     </a>
+                    <span class="tooltip">Github</span>
                 </div>
-                <div>
+
+                <div class="icon">
                     <a href="https://www.linkedin.com/in/harsha-vardhan-raju-kondapalli-a7509a183/" target="_blank">
                         <i class="fa-brands fa-linkedin"></i>
                     </a>
+                    <span class="tooltip">Linkedin</span>
                 </div>
-                <div>
+
+                <div class="icon">
                     <a href="" target="_blank">
                         <i class="fa-brands fa-instagram"></i>
                     </a>
+                    <span class="tooltip">Instagram</span>
                 </div>
             </div>
         </div>
@@ -173,23 +179,28 @@
             <div class="section-left">
                 <div class="section-left-card" style="height: 100%;">
                     <h2>Contact Me @</h2>
-                    <p><i class="fa-regular fa-envelope"></i>&nbsp;&nbsp;rajharsh666@gmail.com</p>
-                    <p><i class="fa-solid fa-phone"></i>&nbsp;&nbsp;+91 82475 18629</p>
+                    <p><i class="fa-regular fa-envelope"></i>&nbsp;&nbsp;<a
+                            href="mailto:rajharsha666@gmail.com">rajharsha666@gmail.com</a></p>
+                    <p><i class="fa-solid fa-phone"></i>&nbsp;&nbsp;<a href="tel:+91 82475 18629">+91 82475 18629</a>
+                    </p>
                 </div>
             </div>
 
             <div class="contact-right">
                 <div class="inputs">
                     <div>
-                        <input type="text" id="contact-name" oninput="onchangeFunc(this)">
+                        <input type="text" id="contact-name" onchange="onchangeFunc(this)" oninput="oninputFunc(this)"
+                            onblur="onchangeFunc(this)" required>
                         <label for="contact-name">Name</label>
                     </div>
                     <div>
-                        <input type="email" id="contact-email" oninput="onchangeFunc(this)">
+                        <input type="email" id="contact-email" onchange="onchangeFunc(this)" oninput="oninputFunc(this)"
+                            onblur="onchangeFunc(this)" required>
                         <label for="contact-email">Email</label>
                     </div>
                 </div>
-                <textarea placeholder="Enter Message you want to convey" cols="30" rows="8"></textarea>
+                <textarea placeholder="Enter Message you want to convey" cols="30" rows="8" id="message"
+                    required></textarea>
                 <div><button class="btn" id="sendBtn">Send&nbsp;&nbsp;<i class="fa-solid fa-paper-plane"></i></button>
                 </div>
             </div>
@@ -201,24 +212,35 @@
 
     <footer id="footer" class="section-padding">
         <div class="top-footer">
-            <div class="logo">
-                <p>Harsha Dev<span>.</span></p>
-            </div>
+            <a href="#hero-section" style="text-decoration: none;">
+                <div class="logo" >
+                    <p>Harsha Dev<span>.</span></p>
+
+                </div></a>
         </div>
-        <div class="middle-footer">
-            <ul class="nav-links" data-visible="false">
-                <li><a class="active-link" href="#hero-section">Home</a></li>
-                <li><a href="#About">About</a></li>
-                <li><a href="#Projects">Projects</a></li>
-                <li><a href="#Contact">Contact Me</a></li>
-            </ul>
-        </div>
+        
+
         <div class="social-icons">
-            <div><a href="https://github.com/HarshaVardhanRajuK" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <div class="icon">
+                <a href="https://github.com/HarshaVardhanRajuK" target="_blank">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <span class="tooltip">Github</span>
             </div>
-            <div><a href="https://www.linkedin.com/in/harsha-vardhan-raju-kondapalli-a7509a183/" target="_blank"><i
-                        class="fa-brands fa-linkedin"></i></a></div>
-            <div><a href="" target="_blank"><i class="fa-brands fa-instagram"></i></a></div>
+
+            <div class="icon">
+                <a href="https://www.linkedin.com/in/harsha-vardhan-raju-kondapalli-a7509a183/" target="_blank">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <span class="tooltip">Linkedin</span>
+            </div>
+
+            <div class="icon">
+                <a href="" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <span class="tooltip">Instagram</span>
+            </div>
         </div>
         <div class="bottom-footer">
             <p>Copyright &copy; <a href="#home" style="text-decoration: none;">Harsha Dev</a> - All rights reserved
