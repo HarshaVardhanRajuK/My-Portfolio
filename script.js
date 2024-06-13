@@ -233,7 +233,7 @@ async function sendData() {
     message: msg.value,
   };
   try {
-    let response = await fetch("http://localhost:5000/contact", {
+    let response = await fetch("/contact.js", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
